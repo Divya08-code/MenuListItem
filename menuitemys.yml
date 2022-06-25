@@ -2,7 +2,7 @@
   apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: MenuListItem2001
+  name: menulistitem-deployment
   labels:
     app: MenuListItem2001
 spec:
@@ -16,8 +16,8 @@ spec:
         app: MenuListItem2001
     spec:
       containers:
-      - name: MenuContainer2001
-        image: dnazureacrcase.azurecr.io/dnazureacr:latest
+      - name: menucontainer2001
+        image: menucontainer2001.azurecr.io/menucontainer2001:latest
         ports:
         - containerPort: 8080
       imagePullSecrets:
@@ -26,7 +26,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: MenuListItem2001svc
+  name: menulistitemsvc
 spec:
   type: LoadBalancer
   ports:
