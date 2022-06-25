@@ -2,7 +2,7 @@
   apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: MenuListItem2001-deployment
+  name: MenuListItem2001
   labels:
     app: MenuListItem2001
 spec:
