@@ -1,18 +1,19 @@
-﻿apiVersion: apps/v1
+
+  apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: menuitemlisting-deployment
+  name: MenuListItem2001-deployment
   labels:
-    app: MenuItemListing
+    app: MenuListItem2001
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: MenuItemListing  
+      app: MenuListItem2001
   template:
     metadata:
       labels:
-        app: MenuItemListing
+        app: MenuListItem2001
     spec:
       containers:
       - name: MenuContainer2001
@@ -25,10 +26,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: menuitemlistingsvc
+  name: MenuListItem2001svc
 spec:
   type: LoadBalancer
   ports:
   - port: 80
   selector:
-    app: MenuItemListing
+    app: MenuListItem2001
